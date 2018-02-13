@@ -48,7 +48,7 @@ void draw()
     drawCell();
   }
 
-  tick();
+  show();
 }
 
 void show()
@@ -101,9 +101,15 @@ void show()
 
 void tick()
 {
-  show();
 }
 
 void grid_clear()
 {
+  for (int y = 0; y < h; y++)
+  {
+    for (int x = 0; x < w; x++)
+    {
+      matrix[x + y * w] = 0;
+    }
+  }
 }
